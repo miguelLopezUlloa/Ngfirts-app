@@ -1,0 +1,28 @@
+
+<p> Machine-Server component </p>
+
+<!--This input are using event and taking this in a function()-->
+<!--<input
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)" >-->
+
+<!--This input field are using double binding -->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]=" serverName " >
+
+<!--<p> {{ serverName }}</p>-->
+
+<button class="btn btn-primary"
+        [disabled]="!allowNewServer"
+        (click)="onCreateServer()"> Add Server </button>
+
+<!--Retrive the attribute and refresh with string interporlation
+<p> {{ allowNewServer }}</p>
+-->
+
+<!--&lt;!&ndash;For this case we are using property binding&ndash;&gt;-->
+<!--<p [innerText]="allowNewServer">  </p>-->
+<p> {{ serverCreationStatus }}</p>
